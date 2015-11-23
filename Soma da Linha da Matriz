@@ -1,0 +1,30 @@
+#include <stdlib.h>
+#include <stdio.h>
+  
+int main(){
+int i, l, j;
+char t;
+  
+double N[12][12]; //tamanho da matriz 
+double soma = 0.0;
+  
+scanf("%d ", &l);
+scanf("%c",&t);
+  
+for(i = 0; i < 12; i++){ // para gera as linha da matriz
+    for(j = 0; j < 12; j++){ // pata gera as colunas da matriz
+        scanf("%lf",&N[i][j]); // digita a matriz
+  
+        if(i == l){ // linha for igual ao numero digitado faça a soma
+            soma += N[i][j];
+        }
+    }
+}
+  
+if(t == 'S') // se letra digitada for igual S aprenseta a soma,se nao faça soma e depois divida por 2
+    printf("%.1f\n", soma);
+else
+    printf("%.1f\n", soma/12.0);
+   
+    return 0;
+}
